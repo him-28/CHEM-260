@@ -1,0 +1,76 @@
+;Set temperature (both should be the same)
+ref_t               =  300 300
+gen_temp            =  300
+
+title               =  DNA
+
+integrator          =  md
+dt                  =  0.002	; ps !
+nsteps              =  25000000	; total 500.0 ns.
+nstcomm             =  1
+
+; Output frequency for coords (x), velocities (v) and forces (f)
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+; Checkpointing helps you continue after crashes
+nstcheckpoint            = 1000
+; Output frequency for energies to log file and energy file
+nstlog                   = 250
+nstenergy                = 250
+; Output frequency and precision for xtc file
+nstxtcout                = 5000
+xtc-precision            = 1000
+
+nstlist             =  10
+ns_type             =  grid
+rlist               =  1.0
+coulombtype         =  PME
+rcoulomb            =  1.0
+vdwtype             =  cut-off
+rvdw                =  1.4
+fourierspacing		=  0.12
+fourier_nx		=  0
+fourier_ny		=  0
+fourier_nz		=  0
+pme_order		=  4
+ewald_rtol		=  1e-5
+optimize_fft		=  yes
+; Berendsen temperature coupling is on
+Tcoupl              =  v-rescale
+tau_t               =  0.1 0.1
+tc_grps		    =  DNA Water_and_ions
+;ref_t set above
+;ref_t               =  300
+; Pressure coupling is on
+Pcoupl              =  parrinello-rahman
+pcoupltype          =  isotropic
+tau_p               =  0.5
+compressibility     =  4.5e-5
+ref_p               =  1.0
+; Generate velocites is on at 300 K.
+gen_vel             =  yes
+;gen_temp set above
+;gen_temp            =  300.0
+gen_seed            =  -1
+; OPTIONS FOR BONDS    
+constraints              = h-bonds
+; Type of constraint algorithm
+constraint-algorithm     = Lincs
+; Do not constrain the start configuration
+continuation             = no
+; Use successive overrelaxation to reduce the number of shake iterations
+Shake-SOR                = no
+; Relative tolerance of shake
+shake-tol                = 1e-04
+; Highest order in the expansion of the constraint coupling matrix
+lincs-order              = 4
+; Number of iterations in the final step of LINCS. 1 is fine for
+; normal simulations, but use 2 to conserve energy in NVE runs.
+; For energy minimization with constraints it should be 4 to 8.
+lincs-iter               = 1
+; Lincs will write a warning to the stderr if in one step a bond
+; rotates over more degrees than
+lincs-warnangle          = 30
+; Convert harmonic bonds to morse potentials
+morse                    = no

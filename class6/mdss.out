@@ -1,0 +1,31 @@
+Using default temperature=0.721100 and density=0.844200
+WARNING--MaxStep is less than diffmax (1000)
+Turning off diffusion calculation
+WARNING--MaxStep is less than velautolen (400)
+Turning off velocity autocorrelation calculation
+Molecular Dynamics for 108 LJ Atoms
+Using Temperature scaling during equilibration
+Fixed Density with truncated potential
+Density=  0.844, Temperature=  0.721
+Density=  1.420 (gm/cm^3)  Temperature= 86.099 (K)
+Timestep= 0.004
+    Step   Etotal       Temp    <Temp>    Epot     <Epot>     Press    <Press>
+      20  -5.59029    0.6712    0.6986   -6.5971   -7.0965   -2.7631   -5.2885
+      40  -5.04109    0.7299    0.7029   -6.1359   -6.6300   -0.2050   -2.8930
+Starting Production run
+    Step   Etotal       Temp    <Temp>    Epot     <Epot>     Press    <Press>
+      20  -5.14327    0.6967    0.6859   -6.1883   -6.1710   -0.4512   -0.3800
+      40  -5.13590    0.6880    0.7011   -6.1679   -6.1918   -0.3421   -0.4587
+      60  -5.13800    0.7060    0.6963   -6.1970   -6.1840   -0.4567   -0.4150
+      80  -5.13798    0.7400    0.6999   -6.2479   -6.1895   -0.6592   -0.4407
+     100  -5.13900    0.6526    0.6928   -6.1178   -6.1789   -0.1031   -0.3888
+     120  -5.14284    0.7347    0.6968   -6.2449   -6.1846   -0.7034   -0.4172
+     140  -5.14914    0.7643    0.7044   -6.2956   -6.1974   -0.9475   -0.4800
+     160  -5.14666    0.6888    0.7059   -6.1799   -6.2002   -0.4766   -0.5011
+     180  -5.14770    0.7394    0.7066   -6.2568   -6.2018   -0.8169   -0.5165
+     200  -5.15191    0.7900    0.7153   -6.3368   -6.2158   -1.1215   -0.5784
+Average temperature=0.715278 (85.404143 K)
+Average pressure=-0.578429
+Equilibration time=0.068 minutes
+Production time=0.253 minutes
+Total run time=0.321 minutes

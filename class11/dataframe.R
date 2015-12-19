@@ -1,0 +1,10 @@
+vec1<-1:16
+vec2<-4*vec1+3
+data1<-data.frame(vec1,vec2)
+cat(names(data1),"\n")
+print(data1)
+cat(data1$vec1,"\n")
+cat(data1$vec2,"\n")
+cat(data1[,1],"\n")
+cat(data1[,2],"\n")
+print(data1[2,])

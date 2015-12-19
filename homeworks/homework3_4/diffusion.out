@@ -1,0 +1,75 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                     Gyas ROwers Mature At Cryogenic Speed
+
+                            :-)  VERSION 4.5.4  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                                :-)  g_msd  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f        h2o.xtc  Input        Trajectory: xtc trr trj gro g96 pdb cpt
+  -s        h2o.tpr  Input        Structure+mass(db): tpr tpb tpa gro g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+  -o        msd.xvg  Output       xvgr/xmgr file
+-mol   diff_mol.xvg  Output, Opt. xvgr/xmgr file
+-pdb   diff_mol.pdb  Output, Opt. Protein data bank file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-b           time   0       First frame (ps) to read from trajectory
+-e           time   2000    Last frame (ps) to read from trajectory
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-[no]w       bool   no      View output .xvg, .xpm, .eps and .pdb files
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-type        enum   no      Compute diffusion coefficient in one direction:
+                            no, x, y or z
+-lateral     enum   no      Calculate the lateral diffusion in a plane
+                            perpendicular to: no, x, y or z
+-[no]ten     bool   no      Calculate the full tensor
+-ngroup      int    1       Number of groups to calculate MSD for
+-[no]mw      bool   yes     Mass weighted MSD
+-[no]rmcomm  bool   no      Remove center of mass motion
+-tpdb        time   0       The frame to use for option -pdb (ps)
+-trestart    time   10      Time between restarting points in trajectory (ps)
+-beginfit    time   -1      Start time for fitting the MSD (ps), -1 is 10%
+-endfit      time   -1      End time for fitting the MSD (ps), -1 is 90%
+
+Reading file h2o.tpr, VERSION 4.5.5 (single precision)
+Reading file h2o.tpr, VERSION 4.5.5 (single precision)
+
+Select a group to calculate mean squared displacement for:
+Group     0 (         System) has 61920 elements
+Group     1 (          Water) has 61920 elements
+Group     2 (            SOL) has 61920 elements
+
+Used 201 restart points spaced 10 ps over 2000 ps
+
+
+gcq#46: "I Wonder, Should I Get Up..." (J. Lennon)
+
+Selected 0: 'System'
+Fitting from 200 to 1800 ps
+
+D[    System] 2.7747 (+/- 0.1208) 1e-5 cm^2/s

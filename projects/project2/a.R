@@ -1,0 +1,5 @@
+cs<-read.table("out.txt")
+png("graph.png") 
+plot(cs$V3~cs$V1, type="l",col=3)
+lines(cs$V2~cs$V1, col=2)
+dev.off()

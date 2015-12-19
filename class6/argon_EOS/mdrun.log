@@ -1,0 +1,144 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                      GROwing Monsters And Cloning Shrimps
+
+                            :-)  VERSION 4.5.5  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                                :-)  mdrun  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -s         ar.tpr  Input        Run input file: tpr tpb tpa
+  -o         ar.trr  Output       Full precision trajectory: trr trj cpt
+  -x         ar.xtc  Output, Opt. Compressed trajectory (portable xdr format)
+-cpi         ar.cpt  Input, Opt.  Checkpoint file
+-cpo         ar.cpt  Output, Opt. Checkpoint file
+  -c         ar.gro  Output       Structure file: gro g96 pdb etc.
+  -e         ar.edr  Output       Energy file
+  -g         ar.log  Output       Log file
+-dhdl        ar.xvg  Output, Opt. xvgr/xmgr file
+-field       ar.xvg  Output, Opt. xvgr/xmgr file
+-table       ar.xvg  Input, Opt.  xvgr/xmgr file
+-tablep      ar.xvg  Input, Opt.  xvgr/xmgr file
+-tableb      ar.xvg  Input, Opt.  xvgr/xmgr file
+-rerun       ar.xtc  Input, Opt.  Trajectory: xtc trr trj gro g96 pdb cpt
+-tpi         ar.xvg  Output, Opt. xvgr/xmgr file
+-tpid        ar.xvg  Output, Opt. xvgr/xmgr file
+ -ei         ar.edi  Input, Opt.  ED sampling input
+ -eo         ar.edo  Output, Opt. ED sampling output
+  -j         ar.gct  Input, Opt.  General coupling stuff
+ -jo         ar.gct  Output, Opt. General coupling stuff
+-ffout       ar.xvg  Output, Opt. xvgr/xmgr file
+-devout      ar.xvg  Output, Opt. xvgr/xmgr file
+-runav       ar.xvg  Output, Opt. xvgr/xmgr file
+ -px         ar.xvg  Output, Opt. xvgr/xmgr file
+ -pf         ar.xvg  Output, Opt. xvgr/xmgr file
+-mtx         ar.mtx  Output, Opt. Hessian matrix
+ -dn         ar.ndx  Output, Opt. Index file
+-multidir        ar  Input, Opt., Mult. Run directory
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    0       Set the nicelevel
+-deffnm      string ar      Set the default filename for all file options
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-[no]pd      bool   no      Use particle decompostion
+-dd          vector 0 0 0   Domain decomposition grid, 0 is optimize
+-nt          int    0       Number of threads to start (0 is guess)
+-npme        int    -1      Number of separate nodes to be used for PME, -1
+                            is guess
+-ddorder     enum   interleave  DD node order: interleave, pp_pme or cartesian
+-[no]ddcheck bool   yes     Check for all bonded interactions with DD
+-rdd         real   0       The maximum distance for bonded interactions with
+                            DD (nm), 0 is determine from initial coordinates
+-rcon        real   0       Maximum distance for P-LINCS (nm), 0 is estimate
+-dlb         enum   auto    Dynamic load balancing (with DD): auto, no or yes
+-dds         real   0.8     Minimum allowed dlb scaling of the DD cell size
+-gcom        int    -1      Global communication frequency
+-[no]v       bool   no      Be loud and noisy
+-[no]compact bool   yes     Write a compact log file
+-[no]seppot  bool   no      Write separate V and dVdl terms for each
+                            interaction type and node to the log file(s)
+-pforce      real   -1      Print all forces larger than this (kJ/mol nm)
+-[no]reprod  bool   no      Try to avoid optimizations that affect binary
+                            reproducibility
+-cpt         real   15      Checkpoint interval (minutes)
+-[no]cpnum   bool   no      Keep and number checkpoint files
+-[no]append  bool   yes     Append to previous output files when continuing
+                            from checkpoint instead of adding the simulation
+                            part number to all file names
+-maxh        real   -1      Terminate after 0.99 times this time (hours)
+-multi       int    0       Do multiple simulations in parallel
+-replex      int    0       Attempt replica exchange every # steps
+-reseed      int    -1      Seed for replica exchange, -1 is generate a seed
+-[no]ionize  bool   no      Do a simulation including the effect of an X-Ray
+                            bombardment on your system
+
+
+Back Off! I just backed up ar.log to ./#ar.log.6#
+Reading file ar.tpr, VERSION 4.5.5 (single precision)
+Starting 4 threads
+Making 1D domain decomposition 4 x 1 x 1
+
+Back Off! I just backed up ar.xtc to ./#ar.xtc.6#
+starting mdrun 'Argon'
+10000 steps,     20.0 ps.
+
+Step 1  Warning: pressure scaling more than 1%, mu: 0.916542 0.916542 0.916542
+
+Step 1  Warning: pressure scaling more than 1%, mu: 0.916542 0.916542 0.916542
+
+Step 1  Warning: pressure scaling more than 1%, mu: 0.916542 0.916542 0.916542
+
+Step 1  Warning: pressure scaling more than 1%, mu: 0.916542 0.916542 0.916542
+
+Step 6  Warning: pressure scaling more than 1%, mu: 0.963015 0.963015 0.963015
+
+Step 6  Warning: pressure scaling more than 1%, mu: 0.963015 0.963015 0.963015
+
+Step 6  Warning: pressure scaling more than 1%, mu: 0.963015 0.963015 0.963015
+
+Step 6  Warning: pressure scaling more than 1%, mu: 0.963015 0.963015 0.963015
+
+Writing final coordinates.
+
+Back Off! I just backed up ar.gro to ./#ar.gro.6#
+
+ Average load imbalance: 5.2 %
+ Part of the total run time spent waiting due to load imbalance: 0.0 %
+
+
+NOTE: 13 % of the run time was spent communicating energies,
+      you might want to use the -gcom option of mdrun
+
+
+	Parallel run - timing based on wallclock.
+
+               NODE (s)   Real (s)      (%)
+       Time:    123.231    123.231    100.0
+                       2:03
+               (Mnbf/s)   (MFlops)   (ns/day)  (hour/ns)
+Performance:      0.635     47.747     14.024      1.711
+
+gcq#105: "Take Your Medications and Preparations and Ram It Up Your Snout" (F. Zappa)
+

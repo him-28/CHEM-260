@@ -1,0 +1,40 @@
+# This file was created Tue Sep 15 13:04:18 2015
+# by the following command:
+# g_energy -f ar.edr 
+#
+# g_energy is part of G R O M A C S:
+#
+# Grunge ROck MAChoS
+#
+@    title "Gromacs Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kg/m^3)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Density"
+    0.000000   40.861862
+    1.000000   82.937218
+    2.000000   81.742119
+    3.000000   81.770515
+    4.000000   81.742393
+    5.000000   82.049477
+    6.000000   82.993004
+    7.000000   81.465530
+    8.000000   83.263222
+    9.000000   82.423386
+   10.000000   82.976471
+   11.000000   81.837997
+   12.000000   84.444031
+   13.000000   82.068771
+   14.000000   81.605141
+   15.000000   81.361755
+   16.000000   84.822281
+   17.000000   82.262817
+   18.000000   85.024132
+   19.000000   82.900230
+   20.000000   82.522354

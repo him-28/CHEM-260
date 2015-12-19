@@ -1,0 +1,13 @@
+c1=-200
+c2=33.258
+c3=-7.5884
+c4=1.0306
+c5=-0.058757
+c6=-0.0033566
+c7=0.00060696
+#c1+c2*p+c3p^2+c4*p^3+c5*p^4+c6*p^5+c7*p^6=0
+roots = polyroot(c(c1,c2,c3,c4,c5,c6,c7))
+a<-c(Re(roots)[abs(Im(roots)) < 1e-6])
+cat(a[a>0],"\n")
+#display non negative root
+cat(Re(roots[4]),"\n")

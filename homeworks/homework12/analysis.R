@@ -1,0 +1,5 @@
+cs<-read.table("lungcap.txt", header=T)
+model<-lm(lungcap~age, data=cs)
+plot(lungcap~age, data=cs)
+abline(model)
+summary(model)
